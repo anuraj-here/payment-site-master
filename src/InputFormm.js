@@ -64,20 +64,32 @@ const App = () => {
 }
 
   return (
+    
     <Box
-    class="box"
+    className="box"
       style={{
         width: "100%",
 padding: "5px 19px"
 
       }}
     >
-
+<ToastContainer
+position="bottom-center"
+autoClose={5000}
+hideProgressBar={false}
+newestOnTop={false}
+closeOnClick
+rtl={false}
+pauseOnFocusLoss
+draggable
+pauseOnHover
+theme="dark"
+/>
   <img
       
       alt=''
       src={council}
-     class="krsn"
+     className="krsn"
       style={{width: "150px",
         height: "150px",
         marginLeft: "auto",
@@ -120,7 +132,7 @@ padding: "5px 19px"
       </Button>
 
       {show && (
-        <Box class="qr">
+        <Box className="qr">
           <Image  src={data.qr} />
           <Button onClick={() => window.open(data.intent, '_blank')}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
             Open in App
