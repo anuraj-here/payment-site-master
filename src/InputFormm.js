@@ -2,7 +2,8 @@ import { Button, TextInput,Box,Image, NumberInput } from '@mantine/core'
 import React, { useState } from 'react'
 import upiqr from "upiqr";
 import council from './council.png'
-
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css';
 
 const App = () => {
   const [name, setName] = React.useState('');
@@ -13,7 +14,18 @@ const App = () => {
 
 
   const UPIGen = ()=>{
-        
+    if(amt < 50){
+      toast.warn('Please enter amount above ₹50', {
+        position: "bottom-center",
+        autoClose: 5000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "dark",
+        });
+    }
     if(name.trim() && sch.trim() && amt > 50){
     upiqr({
         payeeVPA: "9111827985@paytm",
