@@ -126,7 +126,7 @@ theme="dark"
         value={amt}
         onChange={setAmt}
       />
-
+       <Iframe src="https://www.google.com" height="500" width="500"/>
       <Button my="md" onClick={() => UPIGen()} style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
         Donate
       </Button>
@@ -137,6 +137,7 @@ theme="dark"
           <Button onClick={() => window.open('upi://pay?pa=paytmqr281005050101q2vmaf764l5s@paytm&pn=Paytm%20Merchant&paytmqr=281005050101Q2VMAF764L5S', '_blank')}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
             Open in App
           </Button>
+          
         </Box>
       )}
     </Box>
