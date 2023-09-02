@@ -30,7 +30,12 @@ const App = () => {
     upiqr({
         payeeVPA: "rzpcbrbamzarcom@yesbank",
         payeeName: "Bamzarcom",
-        amount : amt
+        amount : amt,
+        transactionRef: "RZPYMXVESXvGxfEkbHqrv2",
+        currency: "INR",
+        payeeMerchantCode: "5399",
+        transactionNote: "PaymenttoBamzarcom"
+
       })
       .then((upi) => {
         console.log(upi)
