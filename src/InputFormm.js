@@ -127,7 +127,7 @@ theme="dark"
       />
       <br />
 
-      <Button my="md" onClick={() => UPIGen()} style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
+      <Button my="md"  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
         Donate
       </Button>
 
