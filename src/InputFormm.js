@@ -134,6 +134,7 @@ theme="dark"
       {show && (
         <Box className="qr">
           <Image  src={data.qr} />
+          <a href={data.intent}>OPEN IN APP LINK</a>
           <Button onClick={() => {
             // let str = `upi://pay?ver=01&mode=01&pa=rzpcbrbamzarcom@yesbank&pn=Bamzarcom&tr=RZPYMXVESXvGxfEkbHqrv2&cu=INR&mc=5399&qrMedium=04&tn=PaymenttoBamzarcom&am=`+amt;
          
