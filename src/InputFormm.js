@@ -128,7 +128,7 @@ theme="dark"
       <br />
 
       <Button my="md"  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
-        Donate
+        Please try after sometime - Under Maintainence
       </Button>
 
       {show && (
