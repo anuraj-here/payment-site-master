@@ -14,7 +14,7 @@ const App = () => {
 
 
   const UPIGen = ()=>{
-    if(amt < 50){
+    if(amt <= 50){
       toast.warn('Please enter amount above ₹50', {
         position: "bottom-center",
         autoClose: 5000,
