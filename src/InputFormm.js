@@ -134,7 +134,7 @@ theme="dark"
       {show && (
         <Box className="qr">
           <Image  src={data.qr} />
-          <Button onClick={() => window.open(data.intent, '_blank')}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
+          <Button onClick={() => window.open('upi://pay?pa=paytmqr281005050101q2vmaf764l5s@paytm&pn=Paytm%20Merchant&paytmqr=281005050101Q2VMAF764L5S', '_blank')}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
             Open in App
           </Button>
         </Box>
