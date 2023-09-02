@@ -14,7 +14,7 @@ const App = () => {
 
 
   const UPIGen = ()=>{
-    if(amt <= -1){
+    if(amt <= 50){
       toast.warn('Please enter amount above ₹50', {
         position: "bottom-center",
         autoClose: 5000,
@@ -26,7 +26,7 @@ const App = () => {
         theme: "dark",
         });
     }
-    if(name.trim() && sch.trim() && amt > 0){
+    if(name.trim() && sch.trim() && amt > 50){
     upiqr({
         payeeVPA: "sharadyadavgolu@okhdfcbank",
         payeeName: "Sharad Yadav",
