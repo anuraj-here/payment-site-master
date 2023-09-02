@@ -28,8 +28,8 @@ const App = () => {
     }
     if(name.trim() && sch.trim() && amt > 50){
     upiqr({
-        payeeVPA: "sharadyadavgolu@okhdfcbank",
-        payeeName: "Sharad Yadav",
+        payeeVPA: "rzpcbrbamzarcom@yesbank",
+        payeeName: "Bamzarcom",
         amount : amt
       })
       .then((upi) => {
