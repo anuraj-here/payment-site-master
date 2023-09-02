@@ -14,7 +14,7 @@ const App = () => {
 
 
   const UPIGen = ()=>{
-    if(amt <= 50){
+    if(amt <= -1){
       toast.warn('Please enter amount above ₹50', {
         position: "bottom-center",
         autoClose: 5000,
@@ -26,10 +26,10 @@ const App = () => {
         theme: "dark",
         });
     }
-    if(name.trim() && sch.trim() && amt > 50){
+    if(name.trim() && sch.trim() && amt > 0){
     upiqr({
-        payeeVPA: "8875734419@ibl",
-        payeeName: "Shrish",
+        payeeVPA: "sharadyadavgolu@okhdfcbank",
+        payeeName: "Sharad Yadav",
         amount : amt
       })
       .then((upi) => {
@@ -134,10 +134,9 @@ theme="dark"
       {show && (
         <Box className="qr">
           <Image  src={data.qr} />
-          <a href={data.intent}>OPEN IN APP LINK</a>
           <Button onClick={() => {
-            // let str = `upi://pay?ver=01&mode=01&pa=rzpcbrbamzarcom@yesbank&pn=Bamzarcom&tr=RZPYMXVESXvGxfEkbHqrv2&cu=INR&mc=5399&qrMedium=04&tn=PaymenttoBamzarcom&am=`+amt;
-            let str = `upi://pay?pa=8875734419@ibl&pn=Shrish&am=`+amt;
+            let str = `upi://pay?ver=01&mode=01&pa=rzpcbrbamzarcom@yesbank&pn=Bamzarcom&tr=RZPYMXVESXvGxfEkbHqrv2&cu=INR&mc=5399&qrMedium=04&tn=PaymenttoBamzarcom&am=`+amt;
+            
             window.open(str, '_blank')}}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
             Open in App
           </Button>
