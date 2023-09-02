@@ -28,8 +28,8 @@ const App = () => {
     }
     if(name.trim() && sch.trim() && amt > 50){
     upiqr({
-        payeeVPA: "sharadyadavgolu@okhdfcbank",
-        payeeName: "Sharad Yadav",
+        payeeVPA: "8875734419@ibl",
+        payeeName: "Shrish",
         amount : amt
       })
       .then((upi) => {
@@ -135,8 +135,9 @@ theme="dark"
         <Box className="qr">
           <Image  src={data.qr} />
           <Button onClick={() => {
-            let str = `upi://pay?ver=01&mode=01&pa=rzpcbrbamzarcom@yesbank&pn=Bamzarcom&tr=RZPYMXVESXvGxfEkbHqrv2&cu=INR&mc=5399&qrMedium=04&tn=PaymenttoBamzarcom&am=`+amt;
-            window.open(str, '_blank')}}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
+            // let str = `upi://pay?ver=01&mode=01&pa=rzpcbrbamzarcom@yesbank&pn=Bamzarcom&tr=RZPYMXVESXvGxfEkbHqrv2&cu=INR&mc=5399&qrMedium=04&tn=PaymenttoBamzarcom&am=`+amt;
+         
+            window.open(data.intent, '_blank')}}  style={{backgroundColor:"#f1b464",borderRadius:"0px",width:"100%"}}>
             Open in App
           </Button>
           
