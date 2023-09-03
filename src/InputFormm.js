@@ -38,12 +38,22 @@ const App = () => {
 
       })
       .then((upi) => {
-        console.log(upi)
         setData({
             'qr' : upi.qr,
             'intent' : upi.intent
         })
-        setShow(true)
+        setShow(true);
+
+        toast('Scan QR OR Click "Open in App"', {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
 
         fetch('https://payment-api-coral.vercel.app/addsch', {
             method: 'POST',
